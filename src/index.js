@@ -35,9 +35,12 @@ const Board = () =>{
 const Square= (props) =>{
 
   return(
-    <div className="square">
-      {props.value}
-    </div>
+    <button 
+      className="square"
+      onClick={() => alert(`square ${props.value} clicked`)}
+
+    >{props.value}
+    </button>
   );
 };
 
