@@ -1,5 +1,6 @@
 
 import  ReactDOM from "react-dom";
+import './index.css'
 
 const Game = () =>{
   return (
