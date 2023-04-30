@@ -11,7 +11,15 @@ const Board = () =>{
     padding: 20
   }}>
     Board
-    <Square />
+    <div className="board-row">
+    <Square /><Square /><Square />
+    </div>
+    <div className="board-row">
+    <Square /><Square /><Square />
+    </div>
+    <div className="board-row">
+    <Square /><Square /><Square />
+    </div>
   </div>
   );
 };
@@ -19,21 +27,13 @@ const Board = () =>{
 const Square= () =>{
 
   return(
-    <div style={{
-      backgroundColor: "gold",
-      margin: 10,
-      padding: 20,
-    }}>Square</div>
+    <div className="square">X</div>
   );
 };
 
 const Game = () =>{
   return (
-    <div style = {{
-      backgroundColor: "salmon",
-      margin: 10,
-      padding: 20,
-    }}> 
+    <div className="game"> 
       Game
       <Board />
       
