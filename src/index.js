@@ -1,4 +1,6 @@
 
+// eslint-disable-next-line no-unused-vars
+import React,{useState} from 'react';
 import  ReactDOM from "react-dom";
 import './index.css'
 
@@ -7,7 +9,7 @@ const Board = () =>{
 
   const renderSquare = (i) =>{
     return(
-      <Square value={i}/>
+      <Square />
     );
   };
   
@@ -34,12 +36,14 @@ const Board = () =>{
 
 const Square= (props) =>{
 
+  const [value, setValue] = useState(null);
+
   return(
     <button 
       className="square"
-      onClick={() => alert(`square ${props.value} clicked`)}
+      onClick={() => setValue('X')}
 
-    >{props.value}
+    >{value}
     </button>
   );
 };
