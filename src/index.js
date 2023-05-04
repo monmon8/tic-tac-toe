@@ -6,20 +6,23 @@ import './index.css'
 
 
 const Board = () =>{
-  const initialSquares = [
-    null, null, null,
-    null, null, null,
-    null,null, null
-  ];
+  const initialSquares = Array(9).fill(null)
+  
   const[squares, setSquares ] = useState(initialSquares)
    
   const handleClickEvent = (i) => {
-    alert (`square ${i} clicked`);
-  };
+
+    const newSquares = [...squares];
+
+    newSquares[i] = 'X';
+
+    setSquares(newSquares)
+};
 
   const renderSquare = (i) =>{
     return(
       <Square value = {squares[i]} 
+
         onClickEvent = {() => handleClickEvent(i)}
       />
     );
